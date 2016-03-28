@@ -1,18 +1,22 @@
 /* jshint node: true */
+var packageNames = require('./package-names');
+var bundles = require('./bundles');
 
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ember-cli-bundle-loader-consumer',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    // NOTE: locationType hash is required for links between addons to work correctly
+    locationType: 'hash',
+    packageNames,
+    bundles,
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }
     },
-
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

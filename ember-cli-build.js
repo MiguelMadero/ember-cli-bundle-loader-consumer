@@ -1,13 +1,20 @@
 /*jshint node:true*/
-/* global require, module */
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var EmberAppWithPackages = require('ember-cli-bundle-loader/lib/broccoli/ember-app-with-packages');
 
-module.exports = function(defaults) {
-  var app = new EmberApp(defaults, {
-    // Add options here
+module.exports = function (defaults) {
+  var emberAppWithPackages = new EmberAppWithPackages(defaults, {
+    sharedBuildConfig: {
+      // This configuration applies to the app config as well as all the packages
+    },
+    appBuildConfig: {
+      // This configuration applies to the app only and is different than the configuration used by packages
+    },
+    packagesBuildConfig: {
+      // This configuration applies to the app only and is different than the configuration used by the app
+    }
   });
 
-  // Use `app.import` to add additional libraries to the generated
+  // Use `emberAppWithPackages.import` to add additional libraries to the generated
   // output files.
   //
   // If you need to use different assets in different
@@ -20,5 +27,5 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
+  return emberAppWithPackages.toTree();
 };

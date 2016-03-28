@@ -1,7 +1,7 @@
 # Ember-cli-bundle-loader-consumer
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a sample app that consumes ember-cli-bundle-loader and its generators. 
+
 
 ## Prerequisites
 
