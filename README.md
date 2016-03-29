@@ -1,6 +1,6 @@
 # Ember-cli-bundle-loader-consumer
 
-This is a sample app that consumes ember-cli-bundle-loader and its generators. 
+This is a sample app that consumes ember-cli-bundle-loader and its generators. The application is built as two separate *bundles* one for the main app and another one for a package called package1. The code for package1 is lazy loaded when we try to visit any of its routes. 
 
 
 ## Prerequisites
