@@ -6,6 +6,7 @@ module.exports = [
   // This will be used later to concat packages into a single bundle. Right now there
   // is a one-one mapping in config, but when we lazy-load we think of bundles not packages
   packages: ['package1'],
+  urls: ['assets/package1.js'],
   // Routes can handle more than one route segment. We have an array of array since the same bundle
   // can handle a URL like '/package1' and '/other-url'.
   // Each entry is an array, where each element of the nested array represents the name of the route
